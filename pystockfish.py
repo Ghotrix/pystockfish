@@ -166,6 +166,7 @@ class Engine(subprocess.Popen):
 
 	def put(self, command):
 		self.stdin.write(command+'\n')
+		self.stdin.flush()
 
 	def flush(self):
 		self.stdout.flush()
